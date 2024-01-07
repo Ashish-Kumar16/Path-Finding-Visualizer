@@ -24,3 +24,10 @@ def generate_maze(size, wall_percentage):
             num_walls += 1
 
     return maze, start, end
+
+def print_maze(maze):
+    os.system('clear' if os.name == 'posix' else 'cls')  # Clear the terminal screen
+
+    for row in maze:
+        print(' '.join(str(cell) for cell in row))
+    print()
